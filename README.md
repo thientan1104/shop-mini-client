@@ -1,30 +1,32 @@
-# Lab 01 – iMeoShop
+# React + TypeScript + Vite
 
-**Sinh viên:** Võ Phạm Thiên Tân
-**Môn học:** Công nghệ lập trình hiện đại
+This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
-iMeoShop là trang chủ cửa hàng thiết bị Apple, được phát triển từ bài Lab 1 ShopMini bằng React, TypeScript và Vite.
+Currently, two official plugins are available:
 
-## Nội dung bài
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-- Trang chủ có thanh điều hướng, banner, danh mục, lưới sản phẩm và chân trang.
-- Có 32 mẫu hoặc cấu hình, chia đều cho iPhone, iPad, Mac và Apple Watch. Chọn danh mục để xem 8 sản phẩm tương ứng.
-- Sản phẩm hết hàng có nhãn trạng thái và nút thêm vào giỏ bị khóa. Giá, tồn kho và giỏ hàng dùng để minh họa.
-- Ảnh sản phẩm lấy từ [Apple Việt Nam](https://www.apple.com/vn/) và được lưu trong thư mục public/images/apple.
+## React Compiler
 
-## Chạy project
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-    npm ci
-    npm run dev
+## Expanding the Oxlint configuration
 
-Mở [localhost:5173](http://localhost:5173) để xem trang.
+If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
 
-## Ảnh minh chứng
+```json
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "typescript", "oxc"],
+  "options": {
+    "typeAware": true
+  },
+  "rules": {
+    "react/rules-of-hooks": "error",
+    "react/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
+```
 
-### Trang chủ iMeoShop
-
-![Trang chủ iMeoShop](docs/images/iMeoShop_01_Toan_trang.jpg)
-
-### Mã nguồn trong VS Code
-
-![Cây thư mục và mã nguồn iMeoShop](docs/images/iMeoShop_02_Ma_nguon_VS_Code.jpg)
+See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
