@@ -150,6 +150,22 @@ main {
   color: #6b7280;
 }
 
+.product-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+}
+
+.stock-label {
+  border-radius: 999px;
+  padding: 2px 8px;
+  background: #fce8e6;
+  color: #9f221d;
+  font-size: 12px;
+  font-weight: 600;
+}
+
 .product-price {
   font-weight: 700;
   color: #e07a1f;
@@ -165,8 +181,14 @@ main {
   cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover:not(:disabled) {
   background: #174bb0;
+}
+
+.btn:disabled {
+  background: #edf0f4;
+  color: #4b5563;
+  cursor: not-allowed;
 }
 
 /* ---------- Footer ---------- */
