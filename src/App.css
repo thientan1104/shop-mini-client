@@ -93,6 +93,26 @@ main {
   margin-bottom: 20px;
 }
 
+.categories {
+  margin-bottom: 32px;
+}
+
+.category-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+}
+
+.category-list li {
+  border-radius: 999px;
+  padding: 8px 14px;
+  background: #e3eef9;
+  color: #16365d;
+  font-size: 14px;
+  font-weight: 600;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
