@@ -1,20 +1,25 @@
-import type { Product } from "../data/products";
+import type { Product, ProductCategory } from "../data/products";
 
 type Props = {
   items: Product[];
+  category: ProductCategory;
+  onChange: (category: ProductCategory) => void;
 };
 
-export default function CategoryList({ items }: Props) {
+export default function CategoryList({ items, category, onChange }: Props) {
   const categories = [...new Set(items.map((product) => product.category))];
 
   return (
-    <section className="container categories" aria-labelledby="categories-title">
-      <h2 id="categories-title" className="section-title">Danh mục sản phẩm</h2>
+    <nav className="categories" aria-label="Danh mục sản phẩm">
       <ul className="category-list" role="list">
-        {categories.map((category) => (
-          <li key={category}>{category}</li>
+        {categories.map((item) => (
+          <li key={item}>
+            <button type="button" aria-pressed={item === category} onClick={() => onChange(item)}>
+              {item}
+            </button>
+          </li>
         ))}
       </ul>
-    </section>
+    </nav>
   );
 }

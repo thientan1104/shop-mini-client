@@ -1,19 +1,25 @@
+import { useState } from "react";
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import CategoryList from "./components/CategoryList";
 import ProductList from "./components/ProductList";
 import Footer from "./components/Footer";
-import { products } from "./data/products";
+import { products, type ProductCategory } from "./data/products";
 import "./App.css";
 
 function App() {
+  const [category, setCategory] = useState<ProductCategory>("iPhone");
+  const visibleProducts = products.filter((product) => product.category === category);
+
   return (
     <>
       <Header />
       <main>
-        <Banner />
-        <CategoryList items={products} />
-        <ProductList id="featured-products" title="Sản phẩm nổi bật" items={products} />
+        <Banner product={products[0]} />
+        <div className="container catalog" id="featured-products">
+          <CategoryList items={products} category={category} onChange={setCategory} />
+          <ProductList title={category} items={visibleProducts} />
+        </div>
       </main>
       <Footer />
     </>

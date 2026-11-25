@@ -2,15 +2,17 @@ import ProductCard from "./ProductCard";
 import type { Product } from "../data/products";
 
 type Props = {
-  id?: string;
   title: string;
   items: Product[];
 };
 
-export default function ProductList({ id, title, items }: Props) {
+export default function ProductList({ title, items }: Props) {
   return (
-    <section id={id} className="container featured-products">
-      <h2 className="section-title">{title}</h2>
+    <section className="featured-products" aria-labelledby="catalog-title">
+      <div className="section-heading">
+        <h2 id="catalog-title">{title}</h2>
+        <p aria-live="polite">{items.length} sản phẩm</p>
+      </div>
       <div className="product-grid">
         {items.map((p) => (
           <ProductCard key={p.id} product={p} />
