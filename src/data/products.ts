@@ -11,7 +11,7 @@ export type Product = {
 };
 
 function appleImage(filename: string) {
-  return `${import.meta.env.BASE_URL}images/apple/${filename}`;
+  return `/images/apple/${filename}`;
 }
 
 export const products: Product[] = [

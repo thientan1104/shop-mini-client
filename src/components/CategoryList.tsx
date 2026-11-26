@@ -1,4 +1,5 @@
 import type { Product, ProductCategory } from "../data/products";
+import { getCategories } from "../utils/product";
 
 type Props = {
   items: Product[];
@@ -7,7 +8,7 @@ type Props = {
 };
 
 export default function CategoryList({ items, category, onChange }: Props) {
-  const categories = [...new Set(items.map((product) => product.category))];
+  const categories = getCategories(items);
 
   return (
     <nav className="categories" aria-label="Danh mục sản phẩm">

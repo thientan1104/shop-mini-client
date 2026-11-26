@@ -8,9 +8,9 @@ type Props = {
 
 export default function ProductList({ title, items }: Props) {
   return (
-    <section className="featured-products" aria-labelledby="catalog-title">
+    <section className="featured-products" aria-label={title}>
       <div className="section-heading">
-        <h2 id="catalog-title">{title}</h2>
+        <h2>{title}</h2>
         <p aria-live="polite">{items.length} sản phẩm</p>
       </div>
       <div className="product-grid">

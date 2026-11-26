@@ -1,0 +1,24 @@
+Số sản phẩm: 4
+Tổng tiền: 229.996.000 đ
+[ 'iPhone Duo x1' ]
+Danh mục: [ 'iPhone', 'iPad', 'Mac', 'Apple Watch' ]
+iPhone, giá tăng dần: [
+  'iPhone 17e',
+  'iPhone 16',
+  'iPhone 17',
+  'iPhone Air',
+  'iPhone 17',
+  'iPhone 18 Pro',
+  'iPhone 18 Pro Max',
+  'iPhone Duo'
+]
+Tìm 'iPad', tối đa 15 triệu: [ 'iPad', 'iPad', 'iPad mini' ]
+Khoảng giá từ 10 đến 15 triệu: [
+  'iPad — Wi‑Fi · 256 GB',
+  'iPad mini — Wi‑Fi · 128 GB',
+  'Apple Watch Series 12 — 42 mm · GPS',
+  'Apple Watch Series 12 — 46 mm · GPS',
+  'Apple Watch Series 12 — 42 mm · GPS + Cellular',
+  'Apple Watch Series 12 — 46 mm · GPS + Cellular'
+]
+Số sản phẩm theo danh mục: { iPhone: 8, iPad: 8, Mac: 8, 'Apple Watch': 8 }
